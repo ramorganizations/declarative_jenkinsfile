@@ -9,7 +9,7 @@ pipeline {
 	
 	}
     
-	/* Here we can declare the environemnt variables */
+	/* Here we can declare the environment variables */
     environment {
       CF_VERSION = '1.0'
       CF_API = ''
@@ -51,8 +51,7 @@ pipeline {
         
         stage('CheckoutCode') {
             steps {
-                git branch: 'development', credentialsId: '8c619a76-32a1-45b7-af0e-cc3e03782886', url: 'https://github.com/ramorganizations/maven-web-application.git'
-            
+                git branch: 'development', credentialsId: '26beb6b9-b6b7-452e-ada7-355d0bb08cc3', url: 'https://github.com/ramorganizations/maven-web-application.git'
                 sh "echo CF_VERSION ${CF_VERSION}"
             }
         }
@@ -79,8 +78,8 @@ pipeline {
         stage('DeployApplicationIntoTomcat') {
             steps {
             // provide SSH credentials to builds via a ssh-agent in Jenkins
-              sshagent(['293267cf-8c00-4465-a36f-4ed77134166e']) {
-                 sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.132.215.125:/opt/apache-tomcat-9.0.41/webapps"
+              sshagent(['9a1cb013-a4be-4870-ae7e-3013c0bd3a12']) {
+                sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@18.118.50.55:/opt/apache-tomcat-9.0.46/webapps/"
                } 
             }
         }
@@ -117,3 +116,4 @@ pipeline {
                    
         }
     }
+}
