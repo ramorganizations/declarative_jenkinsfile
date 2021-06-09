@@ -1,5 +1,5 @@
 #!/usr/bin/env grrovy
-*/ Declarative pipeline must be enclosed within a pipeline block */
+/* Declarative pipeline must be enclosed within a pipeline block */
 pipeline {
      /*agent section specifies where the entire Pipeline script will execute in the Jenkins environment */
     //agent any
