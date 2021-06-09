@@ -95,22 +95,22 @@ pipeline {
             cleanWs()
         }
         success {   
-               mail to: 'devopstrainingblr@gmail.com',
-                    bcc: 'devopstrainingblr@gmail.com',
-                    cc: 'devopstrainingblr@gmail.com', 
-                    from: 'devopstrainingblr@gmail.com', 
-                    replyTo: 'devopstrainingblr@gmail.com',
+               mail to: 'bhulakshmidondeti@gmail.com',
+                    bcc: 'bhulakshmidondeti@gmail.com',
+                    cc: 'bhulakshmidondeti@gmail.com', 
+                    from: 'bhulakshmidondeti@gmail.com', 
+                    replyTo: 'bhulakshmidondeti@gmail.com',
                     subject: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
                     body: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}."
                    
             cleanWs()
         }
         failure {
-            mail to: 'devopstrainingblr@gmail.com',
-                    bcc: 'devopstrainingblr@gmail.com',
-                    cc: 'devopstrainingblr@gmail.com', 
-                    from: 'devopstrainingblr@gmail.com', 
-                    replyTo: 'devopstrainingblr@gmail.com',
+            mail to: 'bhulakshmidondeti@gmail.com',
+                    bcc: 'bhulakshmidondeti@gmail.com',
+                    cc: 'bhulakshmidondeti@gmail.com', 
+                    from: 'bhulakshmidondeti@gmail.com', 
+                    replyTo: 'bhulakshmidondeti@gmail.com',
                     subject: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
                     body: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}."
                    
